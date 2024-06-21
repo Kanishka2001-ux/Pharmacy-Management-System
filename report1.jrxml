@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="eb4bbd72-a938-4f41-83f1-d7c6adb23e1e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select *from medicine;]]>
+	</queryString>
+	<field name="med_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="med_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="company_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="med_quantity" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="med_price" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="med_exp_date" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="med_man_date" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="169" y="15" width="215" height="48" uuid="aa908125-8fd5-4dd3-bbfe-8204066f5946"/>
+				<textElement>
+					<font fontName="Times New Roman" size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Medicine List]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="7" y="17" width="49" height="20" uuid="39fb9fb7-953b-4cb1-9841-892a1be90acf"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Med_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="71" y="17" width="72" height="20" uuid="25a8c443-0a30-49d4-9a9f-72a19cb86f90"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Med_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="158" y="17" width="90" height="20" uuid="f369fc4a-3e22-4264-a0ac-da3eefc15450"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Company]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="17" width="81" height="20" uuid="6a454a3d-abc6-4000-bab4-844ca0c80731"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="17" width="76" height="20" uuid="006f5ca1-c66f-43c3-a191-e5e660363d81"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="17" width="86" height="20" uuid="c69c77ae-9b47-4138-8af7-7a9a5aa9025b"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Exp_Date]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch">
+			<textField>
+				<reportElement x="7" y="7" width="56" height="20" uuid="08ab6169-c7a8-4704-9d40-0f8ba4b44993"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{med_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="71" y="9" width="72" height="20" uuid="9e658a78-280d-4e95-9d57-997f46085056"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{med_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="158" y="9" width="90" height="20" uuid="ba183aac-90db-49ed-b721-14060c33f115"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{company_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="265" y="9" width="81" height="20" uuid="e27997b2-c49b-49eb-8ea6-c7fd08e51a54"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{med_quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="362" y="9" width="76" height="20" uuid="529384a6-f06f-4d13-aed0-e14c8fb7cb07"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{med_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="9" width="86" height="20" uuid="1421e305-f2b3-405f-92cf-c01b475ab770"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{med_exp_date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
